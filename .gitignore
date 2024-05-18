@@ -45,3 +45,4 @@ app.*.map.json
 
 
 CMakeCache.txt
+pubspec.lock
