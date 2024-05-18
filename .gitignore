@@ -1,19 +1,61 @@
-# See https://www.dartlang.org/tools/private-files.html
-
-# Files and directories created by pub
-.packages
-.pub/
+# Build artifacts
 build/
-# If you're building an application, you may want to check-in your pubspec.lock
+.build/
+.dart_tool/
+*.pem
+*.crt
+*.key
+
+# Package manager lock files
 pubspec.lock
 
-.DS_Store
-.atom/
-.idea
-.packages
-.pub/
-build/
-ios/.generated/
-packages
-pubspec.lock
+# IDE/Editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Caching directories
+.dart_cache/
+
+# Analysis results
+analysis_options.yaml
+analysis_result.txt
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE/Editor temporary/backup files
+*~
+*.swp
+
+# Coverage reports
+coverage/
+
+# CMake and C++ files
+CMakeLists.txt
+cmake*
+*.cpp
+*.hpp
+*.cc
+*.hh
+
+# Generated documentation
+doc/
+
+# Podspec for iOS development (if not using Flutter for iOS)
+Podfile.lock
+Podfile
+
+# Android assets/resources (if not using Flutter for Android)
+android/app/src/main/assets/
+android/app/src/main/res/
+
+# Generated code (if using code generation tools)
+lib/generated/
+
 .flutter-plugins
+.flutter-plugins-dependencies
+currency_detection.iml
+android/currency_detection_android.iml
