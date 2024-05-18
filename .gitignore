@@ -1,61 +1,44 @@
-# Build artifacts
-build/
-.build/
-.dart_tool/
-*.pem
-*.crt
-*.key
-
-# Package manager lock files
-pubspec.lock
-
-# IDE/Editor specific files
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-
-# Caching directories
-.dart_cache/
-
-# Analysis results
-analysis_options.yaml
-analysis_result.txt
-
-# Temporary files
-*.tmp
+# Miscellaneous
+*.class
 *.log
-
-# IDE/Editor temporary/backup files
-*~
+*.pyc
 *.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
 
-# Coverage reports
-coverage/
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
-# CMake and C++ files
-CMakeLists.txt
-cmake*
-*.cpp
-*.hpp
-*.cc
-*.hh
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
 
-# Generated documentation
-doc/
-
-# Podspec for iOS development (if not using Flutter for iOS)
-Podfile.lock
-Podfile
-
-# Android assets/resources (if not using Flutter for Android)
-android/app/src/main/assets/
-android/app/src/main/res/
-
-# Generated code (if using code generation tools)
-lib/generated/
-
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
-currency_detection.iml
-android/currency_detection_android.iml
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+/api/node_modules/
