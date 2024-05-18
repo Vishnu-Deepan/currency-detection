@@ -13,7 +13,28 @@ class CameraView extends StatelessWidget {
         init: ScanController(),
         builder: (controller) {
           return controller.isCameraInitialized.value
-              ? CameraPreview(controller.cameraController)
+              ? Stack(
+                  children: [
+                    CameraPreview(controller.cameraController),
+                    Container(
+                      width: 200,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(7),
+                        border: Border.all(color: Colors.green, width: 4),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            color: Colors.white,
+                            child: Text(controller.label),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               : const Center(
                   child: Text("Enable Camera Permission"),
                 );
