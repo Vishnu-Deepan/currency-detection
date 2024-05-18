@@ -1,0 +1,6 @@
+0 Ten
+1 Twenty
+2 Fifty
+3 Hundred
+4 Two Hundred
+5 Five Hundred
