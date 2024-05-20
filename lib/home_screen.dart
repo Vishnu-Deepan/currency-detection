@@ -1,4 +1,7 @@
+import 'package:currency_detection/controller/scan_controller.dart';
+import 'package:currency_detection/views/camera_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,14 +9,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Currency Detector"),),
-      body: SafeArea(child: Container(
-        child: const Column(
-          children: [
-            Text("data"),
-          ],
-        ),
-      ),),
+      body: GetBuilder<ScanController>(
+        init: ScanController(),
+        builder: (controller) {
+          return controller.isCameraInitialized.value
+              ? CameraView(controller: controller)
+              : const Center(
+                  child: Text("Enable Camera Permission"),
+                );
+        },
+      ),
     );
   }
 }
